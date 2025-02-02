@@ -146,7 +146,7 @@
     .herosec {
      min-height: calc(100vh - 0px);
      display: flex;
-     justify-content: center;
+     justify-content: flex-start;
      align-items: center;
      flex-flow: column;
      background: transparent;
