@@ -2,30 +2,26 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #190939;
+    background: transparent !important;
     text-wrap: break-word;
     overflow-wrap: break-word;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display:flex;
-    width:100%;
-    flex-direction: row-reverse !important;
+#container {
+    display: none;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: transparent !important;
+    border-radius: 10px;
 }
 
-nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
+#content {
+    background: transparent !important;
+    color: white;
     font-weight: bold;
-    font-size: 16px;
+    margin-bottom: 80px;
 }
 
 #form {
@@ -35,10 +31,12 @@ nav a {
 
 #inputUrl {
     padding: 10px;
-   min-width:100%; /* Full width input */
+    min-width: 100%; /* Full width input */
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent for adaptability */
+    color: white;
 }
 
 #downloadBtn {
@@ -47,7 +45,7 @@ nav a {
     background-color: #007bff;
     color: #fff;
     border: none;
-    width:100%;
+    width: 100%;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
@@ -56,13 +54,15 @@ nav a {
 #downloadBtn:hover {
     background-color: #0056b3;
 }
-#download{
-    display:flex;
+
+#download {
+    display: flex;
     justify-content: center;
     align-items: center;
-    width:100%;
-    flex-wrap:wrap;
+    width: 100%;
+    flex-wrap: wrap;
 }
+
 #loading {
     text-align: center;
     display: none;
@@ -72,24 +72,15 @@ nav a {
 #loading p {
     font-weight: bold;
     font-size: 38px;
-    color: #333;
+    color: white;
 }
 
-#container {
-    display: none;
-    text-align: center;
-    margin: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-}
-
-#thumb img{
+#thumb img {
     width: 100%;
     height: 300px;
 }
-.dlbtns{
+
+.dlbtns {
     display: inline-block;
     padding: 10px 20px;
     margin: 5px;
@@ -99,87 +90,60 @@ nav a {
     font-weight: bold;
     color: white;
     cursor: pointer;
-    min-width: 150px;  /* Fixed width */
+    min-width: 150px; /* Fixed width */
     transition: background-color 0.3s;
 }
+
 .centerV {
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
 }
-#content{
-    background: #000000a8;
-    color: white;
-    font-weight:bold;
-    margin-bottom:80px;
-}
+
+/* Wave Animation */
 .wave {
-  width: 5px;
-  height: 100px;
-  background: linear-gradient(45deg, red, #fff);
-  margin: 10px;
-  animation: wave 1s linear infinite;
-  border-radius: 20px;
+    width: 5px;
+    height: 100px;
+    background: linear-gradient(45deg, red, #fff);
+    margin: 10px;
+    animation: wave 1s linear infinite;
+    border-radius: 20px;
 }
-.wave:nth-child(2) {
-  animation-delay: 0.1s;
-}
-.wave:nth-child(3) {
-  animation-delay: 0.2s;
-}
-.wave:nth-child(4) {
-  animation-delay: 0.3s;
-}
-.wave:nth-child(5) {
-  animation-delay: 0.4s;
-}
-.wave:nth-child(6) {
-  animation-delay: 0.5s;
-}
-.wave:nth-child(7) {
-  animation-delay: 0.6s;
-}
-.wave:nth-child(8) {
-  animation-delay: 0.7s;
-}
-.wave:nth-child(9) {
-  animation-delay: 0.8s;
-}
-.wave:nth-child(10) {
-  animation-delay: 0.9s;
-}
+.wave:nth-child(2) { animation-delay: 0.1s; }
+.wave:nth-child(3) { animation-delay: 0.2s; }
+.wave:nth-child(4) { animation-delay: 0.3s; }
+.wave:nth-child(5) { animation-delay: 0.4s; }
+.wave:nth-child(6) { animation-delay: 0.5s; }
+.wave:nth-child(7) { animation-delay: 0.6s; }
+.wave:nth-child(8) { animation-delay: 0.7s; }
+.wave:nth-child(9) { animation-delay: 0.8s; }
+.wave:nth-child(10) { animation-delay: 0.9s; }
 
 @keyframes wave {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
+    0% { transform: scale(0); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0); }
 }
 
-
-
-/* Add more styling as needed */
+/* Remove footer if interfering */
+footer {
+    display: none !important;
+}
 
 /* Responsive styles for smaller screens */
 @media only screen and (max-width: 990px) {
     #inputUrl {
         width: 100%;
     }
-
     nav {
         display: block;
         text-align: center;
     }
-   nav ul{
-       flex-direction: column !important;
-   }
+    nav ul {
+        flex-direction: column !important;
+    }
     nav li {
         display: block;
         margin: 10px 0;
