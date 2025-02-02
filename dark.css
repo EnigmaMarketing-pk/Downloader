@@ -144,12 +144,13 @@
     }
 
     .herosec {
-      min-height: calc(100vh - 0px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-flow: column;
-    }
+     min-height: calc(100vh - 0px);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-flow: column;
+     background: transparent;
+   }
 
     .download-video iframe {
       border-radius: 10px;
