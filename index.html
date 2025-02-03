@@ -66,26 +66,12 @@
     </div>
   </div>
 
-  <!-- Embed the iframe -->
-  <iframe id="dynamicIframe" src="https://enigmamarketing-pk.github.io/Downloader/"
-          style="width: 100%; border: none;" scrolling="no" frameborder="0">
-  </iframe>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
   <script src="javascript.js"></script>
 
-  <!-- Script for dynamic iframe height adjustment -->
-  <script>
-    window.addEventListener('message', function(event) {
-      if (event.origin === 'https://enigmamarketing-pk.github.io') {
-        var iframe = document.getElementById('dynamicIframe');
-        iframe.style.height = event.data + 'px';  // Set the height received from the iframe
-      }
-    });
-  </script>
 </body>
 
 </html>
