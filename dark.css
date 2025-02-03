@@ -78,7 +78,7 @@ body {
 /* ... (rest of your shape divider styles) */
 
 .herosec {
-    min-height: 100vh; /* Use min-height for flexibility */
+    min-height: 100%; /* Use min-height for flexibility */
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     justify-content: flex-start; /* Align items to the top */
